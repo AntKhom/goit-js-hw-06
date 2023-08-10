@@ -9,15 +9,18 @@ const ingredients = [
 
 const listEl = document.querySelector('#ingredients');
 
-const items = [];
+const makeLi = ingridients => {
+  const items = [];
 
-for (let ingridient of ingredients) {
-  const liEl = document.createElement('li');
-  liEl.textContent = ingridient;
-  liEl.classList.add('item');
-  items.push(liEl);
+  for (let ingridient of ingredients) {
+    const liEl = document.createElement('li');
+    liEl.textContent = ingridient;
+    liEl.classList.add('item');
+    items.push(liEl);
+  }
+  return items;
 }
+console.log(makeLi(ingredients));
 
-console.log(...items);
-
+const items = makeLi(ingredients);
 listEl.append(...items);
