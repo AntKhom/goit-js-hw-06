@@ -20,7 +20,6 @@ const makeLi = ingridients => {
   }
   return items;
 }
-console.log(makeLi(ingredients));
+console.log(...makeLi(ingredients));
 
-const items = makeLi(ingredients);
-listEl.append(...items);
+listEl.append(...makeLi(ingredients));
