@@ -5,8 +5,8 @@ const changeFontSizeHandler = (e) => {
     let textSize = e.currentTarget.value;
     console.log(e.currentTarget.value);
     console.log(textSize);
-
     formTextEl.style.fontSize = `${textSize}px`;
+    
 }
 
 formInputEl.addEventListener('input',changeFontSizeHandler)
