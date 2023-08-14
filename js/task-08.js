@@ -15,6 +15,7 @@ const submitHandler = (e) => {
         password: password.value,
     };
     console.log(info);
+    formEl.reset();
 };
 
 formEl.addEventListener('submit', submitHandler);   
