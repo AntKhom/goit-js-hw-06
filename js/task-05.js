@@ -6,8 +6,8 @@ const formOutputEl = document.querySelector('#name-output');
 const inputHandler = (event) => {
     console.log(event.currentTarget.value)
     formOutputEl.textContent = 'Anonymous';  
-    if (event.currentTarget.value != '') {
-        formOutputEl.textContent = event.currentTarget.value;
+    if (event.currentTarget.value.trim() !== '') {
+        formOutputEl.textContent = event.currentTarget.value.trim();
     };   
 };
 

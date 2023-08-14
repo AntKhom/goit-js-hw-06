@@ -3,9 +3,12 @@ const formInputEl = document.querySelector('#validation-input');
 const handlerInputValidation = (event) => {
     console.log(event.currentTarget.value.length); 
     console.log(formInputEl.dataset.length);
-    let a = event.currentTarget.value.length;
-    const b = formInputEl.dataset.length;
-    if (a == b) {
+    //Зачем проверять, т.к. понятно что length возвращает number))
+    //преобразуем первое значение в строковое
+    let currentElementLength = event.currentTarget.value.trim().length + ''; //так
+    //let currentElementLength = String(event.currentTarget.value.trim().length); //или так
+    const limitElementLength = formInputEl.dataset.length;
+    if (currentElementLength === limitElementLength) {
         formInputEl.classList.remove('invalid'); 
         formInputEl.classList.add('valid'); 
     } else {
