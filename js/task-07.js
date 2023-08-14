@@ -1,12 +1,11 @@
 const formInputEl = document.querySelector('#font-size-control');
-const formTextEl = document.querySelectorAll('#text');
+const formTextEl = document.querySelector('#text');
 
-const changeFontSizeHandler = (e) => {
-    let textSize = e.currentTarget.value;
-    console.log(e.currentTarget.value);
-    console.log(textSize);
-    formTextEl.style.fontSize = `${textSize}px`;
+
+const changeFontSizeHandler = () => {
+    let inputFontSize = formInputEl.value;
+    formTextEl.style.fontSize = inputFontSize + 'px'
     
 }
-
+changeFontSizeHandler();
 formInputEl.addEventListener('input',changeFontSizeHandler)
