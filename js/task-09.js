@@ -14,4 +14,4 @@ const changeColorHandler = () => {
   bodyEl.style.backgroundColor = currentColor;
 }
 
-btn.addEventListener('click',changeColorHandler)
+btn.addEventListener('click', changeColorHandler);
